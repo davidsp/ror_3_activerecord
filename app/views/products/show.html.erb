@@ -1,0 +1,23 @@
+<p>
+  <strong>Title:</strong>
+  <%= @product.name %>
+</p>
+ 
+<p>
+  <strong>Text:</strong>
+  <%= @product.description %>
+</p>
+<p>
+  <strong>maker:</strong>
+  <%= @product.maker %>
+</p>
+<p>
+  <strong>date added:</strong>
+  <%= @product.added_at %>
+</p>
+<p>
+  <strong>amount:</strong>
+  <%= @product.amount %>
+</p>
+
+<%= link_to 'Back to the whole list', products_path %>
