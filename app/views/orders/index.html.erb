@@ -1,19 +1,18 @@
-<h1>Listing orders</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Status</th>
-      <th>Payment method</th>
-      <th>Address</th>
-      <th>Town</th>
-      <th>Name</th>
-      <th>Surname</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+<div class="app">
+  <h1>Listing orders</h1>
+  <%= link_to '<i class="glyphicon glyphicon-plus"></i> Create new Order'.html_safe, new_order_path, class: "btn btn-primary with-icon" %>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Status</th>
+        <th>Payment method</th>
+        <th>Address</th>
+        <th>Town</th>
+        <th>Name</th>
+        <th>Surname</th>
+        <th></th>
+      </tr>
+    </thead>
 
   <tbody>
     <% @orders.each do |order| %>
@@ -24,9 +23,10 @@
         <td><%= order.town %></td>
         <td><%= order.name %></td>
         <td><%= order.surname %></td>
-        <td><%= link_to 'Show', order %></td>
-        <td><%= link_to 'Edit', edit_order_path(order) %></td>
-        <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td>
+          <%= link_to 'Show', order, class: "btn btn-sm btn-success" %>
+          <%= link_to 'Edit', edit_order_path(order), class: "btn btn-sm btn-warning" %>
+          <%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-sm btn-danger" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -34,4 +34,3 @@
 
 <br>
 
-<%= link_to 'New Order', new_order_path %>

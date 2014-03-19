@@ -10,33 +10,40 @@
     </ul>
   </div>
   <% end %>
-  <p>
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </p>
- 
-  <p>
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
-  </p>
-  <p>
-    <%= f.label :maker %><br>
-    <%= f.text_field :maker %>
-  </p>
+  <div class="row">
+    <div class="col-md-6 .col-xs-12 ">
+      <%= f.label :name %><br>
+      <%= text_field(:product, :name, class: "form-control") %>
+    </p>
+   
+    <p>
+      <%= f.label :description %><br>
+      <%= text_area(:product, :description, class: "form-control") %>
+    </p>
+    <p>
+      <%= f.label :maker %><br>
+      <%= text_field(:product, :maker, class: "form-control") %>
+    </p>
+  </div> 
+  <div class="col-md-6 .col-xs-12 ">
   <p>
     <%= f.label :added_at %><br>
-    <%= f.datetime_select :added_at %>
+      <%= f.datetime_select :added_at, {}, { class: "form-control" } %>
+
   </p>
   <p>
     <%= f.label :amount %><br>
-    <%= f.number_field :amount %>
+      <%= number_field(:product, :amount, class: "form-control") %>
   </p>
   <p>
     <%= f.label :category %><br>
-    <%= f.number_field :category %>
+    <%= text_field(:product, :category, class: "form-control") %>
   </p>
+  </div> 
+  </div> 
  
   <p>
-    <%= f.submit %>
+    <%= f.submit 'create new product', :class => 'btn btn-success btn-lg span12' %>
+
   </p>
 <% end %>

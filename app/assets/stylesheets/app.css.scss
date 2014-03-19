@@ -1,0 +1,37 @@
+.app{
+	width: 95%;
+	margin: 20px auto;
+	h1{
+		font-weight: normal;
+		text-transform: uppercase;
+		padding-bottom: 10px;
+		border-bottom: 1px solid #ddd;
+		text-align: center;
+	}
+}
+.with-icon .glyphicon{
+	margin-right: 10px;
+}
+a:visited{
+	color: #eee
+}
+.btn{
+	border-radius:0;
+}
+
+form {
+	.row {
+		>.col-md-6:first-child {
+			border-right: 1px solid #ddd;
+		}
+		select{
+			display: inline-block;
+			width: auto;
+		}
+	}
+	input[type="submit"] {
+		display:block;
+		margin-top: 10px;
+		width: 100%;
+	}
+}

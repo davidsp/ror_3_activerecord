@@ -1,6 +1,6 @@
-<h1>Editing post</h1>
- 
-<%= render 'form' %>
+<div class="app">
+	<h1>Editing post</h1>
+	<%= link_to '<i class="glyphicon glyphicon-arrow-left"></i>Back'.html_safe,  products_path, class: "btn btn-primary with-icon" %>
+	<%= render 'form' %>
+</div>
 
- 
-<%= link_to 'Back', products_path %>
