@@ -1,34 +1,49 @@
-<p id="notice"><%= notice %></p>
+<div class="app">
+    <div class="jumbotron">
+        <%= link_to '<i class="glyphicon glyphicon-edit"></i>Edit'.html_safe,  edit_order_path(@order), class: "btn btn-primary with-icon" %>
+        <%= link_to '<i class="glyphicon glyphicon-arrow-left"></i>Back'.html_safe,  orders_path, class: "btn btn-primary with-icon" %>
+        <h1>Order details</h1>
 
-<p>
-  <strong>Status:</strong>
-  <%= @order.status %>
-</p>
+        <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Payment method:</strong>
-  <%= @order.payment_method %>
-</p>
+        <p>
+        <strong>Status:</strong>
+        <%= @order.status %>
+        </p>
 
-<p>
-  <strong>Address:</strong>
-  <%= @order.address %>
-</p>
+        <p>
+        <strong>Payment method:</strong>
+        <%= @order.payment_method %>
+        </p>
 
-<p>
-  <strong>Town:</strong>
-  <%= @order.town %>
-</p>
+        <p>
+        <strong>Address:</strong>
+        <%= @order.address %>
+        </p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @order.name %>
-</p>
+        <p>
+        <strong>Town:</strong>
+        <%= @order.town %>
+        </p>
 
-<p>
-  <strong>Surname:</strong>
-  <%= @order.surname %>
-</p>
+        <p>
+        <strong>Name:</strong>
+        <%= @order.name %>
+        </p>
 
-<%= link_to 'Edit', edit_order_path(@order) %> |
-<%= link_to 'Back', orders_path %>
+        <p>
+        <strong>Surname:</strong>
+        <%= @order.surname %>
+        </p>
+        <p>
+          <td colspan="8">
+            <strong>ID Products:</strong><br>
+            <ol>
+              <% for line_items in @order.line_items %>
+              <li><%= line_items[:product_id] %></li>
+              <% end %>
+            </ol>
+          </td>
+        </p>
+    </div>
+</div>

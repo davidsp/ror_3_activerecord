@@ -5,6 +5,7 @@ class OrdersController < ApplicationController
   # GET /orders.json
   def index
     @orders = Order.all
+
   end
 
   # GET /orders/1
@@ -15,6 +16,9 @@ class OrdersController < ApplicationController
   # GET /orders/new
   def new
     @order = Order.new
+
+    #@products = Product.all
+    3.times {@order.line_items.build}
   end
 
   # GET /orders/1/edit
@@ -69,6 +73,6 @@ class OrdersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def order_params
-      params.require(:order).permit(:status, :payment_method, :address, :town, :name, :surname)
+      params.require(:order).permit(:status, :payment_method, :address, :town, :name, :surname, :line_items_attributes => [:product_id,:amount,:price, :_destroy])
     end
 end

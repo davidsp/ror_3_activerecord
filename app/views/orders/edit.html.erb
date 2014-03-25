@@ -1,6 +1,7 @@
-<h1>Editing order</h1>
+<div class="app">
+	<h1>Editing order</h1>
+	<%= link_to '<i class="glyphicon glyphicon-arrow-left"></i>Back'.html_safe,  orders_path, class: "btn btn-primary with-icon" %>
+	<%= link_to '<i class="glyphicon glyphicon-eye-open"></i>Show'.html_safe,  @order, class: "btn btn-primary with-icon" %>
 
-<%= render 'form' %>
-
-<%= link_to 'Show', @order %> |
-<%= link_to 'Back', orders_path %>
+	<%= render 'form' %>
+</div>

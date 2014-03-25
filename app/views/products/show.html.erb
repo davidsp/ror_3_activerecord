@@ -1,23 +1,29 @@
-<p>
-  <strong>Title:</strong>
-  <%= @product.name %>
-</p>
+<div class="app">
+  <div class="jumbotron">
+   <%= link_to '<i class="glyphicon glyphicon-edit"></i>Edit'.html_safe,  edit_product_path(@product), class: "btn btn-primary with-icon" %>
+  <%= link_to '<i class="glyphicon glyphicon-arrow-left"></i>Back'.html_safe,  products_path, class: "btn btn-primary with-icon" %>
  
-<p>
-  <strong>Text:</strong>
-  <%= @product.description %>
-</p>
-<p>
-  <strong>maker:</strong>
-  <%= @product.maker %>
-</p>
-<p>
-  <strong>date added:</strong>
-  <%= @product.added_at %>
-</p>
-<p>
-  <strong>amount:</strong>
-  <%= @product.amount %>
-</p>
-
-<%= link_to 'Back to the whole list', products_path %>
+    <h1>Product details</h1>
+    <p>
+      <strong>Title:</strong>
+      <%= @product.name %>
+    </p>
+     
+    <p>
+      <strong>Text:</strong>
+      <%= @product.description %>
+    </p>
+    <p>
+      <strong>maker:</strong>
+      <%= @product.maker %>
+    </p>
+    <p>
+      <strong>date added:</strong>
+      <%= @product.added_at %>
+    </p>
+    <p>
+      <strong>amount:</strong>
+      <%= @product.amount %>
+    </p>
+  </div>  
+</div>

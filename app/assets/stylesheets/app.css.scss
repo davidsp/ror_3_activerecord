@@ -1,6 +1,7 @@
 .app{
 	width: 95%;
 	margin: 20px auto;
+	font-size: 1.5em;
 	h1{
 		font-weight: normal;
 		text-transform: uppercase;
@@ -10,6 +11,9 @@
 	}
 }
 .with-icon .glyphicon{
+	margin-right: 10px;
+}
+.icon-left{
 	margin-right: 10px;
 }
 a:visited{
@@ -29,9 +33,23 @@ form {
 			width: auto;
 		}
 	}
+	.form-row{
+		padding-bottom: 10px;
+		&:first-child{
+			margin-top: 15px;
+		}
+		select{
+			width: 100%;
+		}
+		.btn{
+			margin-top: 22px;
+		}
+	}
 	input[type="submit"] {
 		display:block;
 		margin-top: 10px;
 		width: 100%;
+		text-transform: uppercase;
+		font-weight: 300;
 	}
 }

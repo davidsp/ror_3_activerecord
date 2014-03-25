@@ -1,0 +1,21 @@
+<div class="row row-space-xs form-row">
+    <p class="col-md-3 .col-xs-12 ">
+    <%= f.label :product %><br>      
+    <%= f.collection_select :product_id, Product.all, :id, :name, prompt: true,  :class => 'form-control' %>
+    </p>
+    <p class="col-md-4 .col-xs-12 ">
+        <%= f.label :amount %><br>      
+        <%= text_field(:builder, :amount, class: "form-control") %>
+    </p>
+    <p class="col-md-3 .col-xs-12 ">
+        <%= f.label :price %><br>      
+        <%= text_field(:builder, :price, class: "form-control") %>
+    </p>
+    <%= f.hidden_field :id %>
+    <%= f.hidden_field :_destroy %>
+    
+    <p class="col-md-2 .col-xs-12 ">
+    <%= link_to_function '<i class="glyphicon glyphicon-remove icon-left"></i>Remove'.html_safe, "remove_fields(this)", class: "btn btn-danger" %>
+
+    </p>
+</div>
