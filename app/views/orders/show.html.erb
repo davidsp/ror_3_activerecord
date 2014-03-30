@@ -36,14 +36,8 @@
         <%= @order.surname %>
         </p>
         <p>
-          <td colspan="8">
-            <strong>ID Products:</strong><br>
-            <ol>
-              <% for line_items in @order.line_items %>
-              <li><%= line_items[:product_id] %></li>
-              <% end %>
-            </ol>
-          </td>
+            <strong>Products:</strong>
+            <%= render @order.line_items %>
         </p>
     </div>
 </div>
